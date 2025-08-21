@@ -7,7 +7,7 @@ const PRODUCTS = [
   { id: 2, name: "Laptop", price: 72499 },
   { id: 3, name: "Headphones", price: 4299 },
 ];
-
+// Above we have product name and 
 // Shopping Cart Component
 function ShoppingCart() {
   const [cartItems, setCartItems] = useState([]);
@@ -188,6 +188,7 @@ function ContactForm() {
         />
         {errors.email && <div id="email-error" className="error-msg">{errors.email}</div>}
       </label>
+      
 
       <label>
         Message:
