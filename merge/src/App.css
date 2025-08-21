@@ -1,0 +1,437 @@
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #d7f0fd 0%, #ffffff 100%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+.layout-header,
+.layout-footer {
+  border: 2px solid #2c7a7b;
+  border-radius: 12px;
+  padding: 15px 20px;
+  background-color: #e0f0f3;
+  box-sizing: border-box;
+}
+
+.layout-header {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c7a7b;
+  text-shadow: 1px 1px 3px #a1cfdc;
+}
+
+.layout-footer {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  border-top-width: 2px;
+  padding-top: 15px;
+  box-sizing: border-box;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+  margin-bottom: 60px;
+}
+
+.portfolio-section h2 {
+  color: #2c7a7b;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #2c7a7b;
+  display: inline-block;
+  padding-bottom: 5px;
+  user-select: none;
+}
+
+.app-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+/* Reduced Portfolio Card size */
+.card {
+  background: white;
+  width: 220px; /* reduced width */
+  border-radius: 12px;
+  border: 2px solid #2c7a7b;
+  box-shadow: 0 6px 25px rgba(44, 122, 123, 0.2);
+  padding: 15px 18px 22px; /* reduced padding */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  box-sizing: border-box;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(44, 122, 123, 0.35);
+}
+
+.card-img {
+  width: 100%;
+  height: 170px; /* reduced height */
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.1rem; /* reduced font size */
+  margin-bottom: 8px;
+  color: #1f5759;
+}
+
+.card-content {
+  font-size: 0.9rem; /* reduced font size */
+  color: #555;
+  margin-bottom: 16px;
+  min-height: 50px; /* reduced min height */
+  line-height: 1.4;
+}
+
+.card-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: #2c7a7b;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem; /* reduced font size */
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(44, 122, 123, 0.4);
+}
+
+.card-btn:hover {
+  background-color: #1e5657;
+  box-shadow: 0 8px 20px rgba(30, 86, 87, 0.7);
+}
+
+/* Product Catalog */
+.catalog-section {
+  margin-bottom: 60px;
+}
+
+.catalog-section h2 {
+  color: #2c7a7b;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #2c7a7b;
+  display: inline-block;
+  padding-bottom: 5px;
+  user-select: none;
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.product-card {
+  background: white;
+  border-radius: 15px;
+  border: 2px solid #2c7a7b;
+  padding: 24px 22px 30px;
+  max-width: 320px;
+  box-shadow: 0 6px 25px rgba(44, 122, 123, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  cursor: default;
+  box-sizing: border-box;
+}
+
+.product-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 14px 38px rgba(44, 122, 123, 0.35);
+}
+
+.product-img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.product-title {
+  font-size: 1.45rem;
+  margin-bottom: 15px;
+  color: #1f5759;
+}
+
+.product-desc {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 16px;
+  min-height: 68px;
+  line-height: 1.3;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2c7a7b;
+  margin-bottom: 22px;
+}
+
+.product-btn {
+  background-color: #2c7a7b;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(44, 122, 123, 0.45);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-btn:hover {
+  background-color: #1e5657;
+  box-shadow: 0 12px 34px rgba(30, 86, 87, 0.7);
+}
+
+.product-btn.added {
+  background-color: #38a169;
+  box-shadow: 0 0 18px #2f855a;
+  animation: pulse 1.5s ease forwards;
+}
+
+.product-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+
+/* Counter Section */
+.counter-section {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.counter-section h2 {
+  color: #2c7a7b;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #2c7a7b;
+  display: inline-block;
+  padding-bottom: 5px;
+  user-select: none;
+}
+
+.counter-container {
+  background: white;
+  display: inline-block;
+  padding: 38px 46px;
+  border-radius: 16px;
+  border: 3px solid #2c7a7b;
+  box-shadow: 0 6px 28px rgba(44, 122, 123, 0.2);
+  user-select: none;
+  min-width: 320px;
+  box-sizing: border-box;
+}
+
+.counter-value {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #225e61;
+  margin: 26px 0;
+  transition: all 0.3s ease;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  user-select: none;
+  min-width: 115px;
+  box-shadow: 0 6px 18px rgba(44, 122, 123, 0.5);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.increment {
+  background-color: #2c7a7b;
+}
+
+.increment:hover:not(:disabled) {
+  background-color: #1e5657;
+  box-shadow: 0 12px 30px rgba(30, 86, 87, 0.7);
+}
+
+.decrement {
+  background-color: #c53030;
+}
+
+.decrement:hover:not(:disabled) {
+  background-color: #822020;
+  box-shadow: 0 12px 30px rgba(130, 32, 32, 0.7);
+}
+
+.reset {
+  background-color: #718096;
+}
+
+.reset:hover {
+  background-color: #4a5568;
+  box-shadow: 0 10px 32px rgba(74, 85, 104, 0.8);
+}
+
+.btn.pressed {
+  transform: scale(0.95);
+  box-shadow: 0 0 12px #1e5657;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* Calculator Section */
+.calculator-section {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.calculator-container {
+  background: white;
+  display: inline-block;
+  padding: 36px 44px;
+  border-radius: 16px;
+  border: 3px solid #2c7a7b;
+  box-shadow: 0 6px 28px rgba(44, 122, 123, 0.2);
+  user-select: none;
+  max-width: 360px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.calc-input {
+  width: 100%;
+  font-size: 2.2rem;
+  padding: 14px 18px;
+  border: 2px solid #2c7a7b;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  text-align: right;
+  color: #225e61;
+  font-weight: 700;
+  box-sizing: border-box;
+  user-select: text;
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.calculator-buttons button {
+  padding: 20px 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: #2c7a7b;
+  box-shadow: 0 8px 24px rgba(44, 122, 123, 0.45);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.calculator-buttons button.operator {
+  background-color: #1e5657;
+}
+
+.calculator-buttons button.operator:hover {
+  background-color: #144043;
+  box-shadow: 0 12px 32px rgba(20, 64, 67, 0.7);
+}
+
+.calculator-buttons button.equal {
+  background-color: #c53030;
+  grid-column: span 2;
+}
+
+.calculator-buttons button.equal:hover {
+  background-color: #822020;
+  box-shadow: 0 12px 34px rgba(130, 32, 32, 0.7);
+}
+
+.calculator-buttons button:hover:not(.equal):not(.operator) {
+  background-color: #1e5657;
+  box-shadow: 0 12px 32px rgba(30, 86, 87, 0.7);
+}
+
+.calculator-buttons button.pressed {
+  transform: scale(0.95);
+  box-shadow: 0 0 12px #1e5657;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* Added button pulse animation */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .app-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .catalog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .btn {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .calculator-container {
+    padding: 28px 22px;
+    max-width: 100%;
+  }
+}
