@@ -1,0 +1,115 @@
+/* src/App.css */
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html, body, #root {
+  height: 100%;
+}
+
+/* Full-screen wrapper and backgrounds */
+.app-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: background-image 1s ease-in-out;
+}
+
+.bg-sunny {
+  background: url('https://source.unsplash.com/1600x900/?sunny') center/cover no-repeat;
+}
+.bg-cloudy {
+  background: url('https://source.unsplash.com/1600x900/?cloudy') center/cover no-repeat;
+}
+.bg-rainy {
+  background: url('https://source.unsplash.com/1600x900/?rain') center/cover no-repeat;
+}
+.bg-stormy {
+  background: url('https://source.unsplash.com/1600x900/?storm') center/cover no-repeat;
+}
+.default {
+  background: #444;
+}
+
+/* Overlay for readability */
+.app-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 0;
+}
+
+/* Centered content */
+.weather-content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Weather info layout */
+.weather-info {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+.icon {
+  font-size: 4rem;
+  animation: float 3s ease-in-out infinite;
+}
+.details h2 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+.details p {
+  font-size: 1rem;
+}
+
+/* Controls styling */
+.controls {
+  margin-top: 30px;
+}
+.controls input {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  width: 180px;
+}
+.controls button {
+  padding: 10px 15px;
+  margin-left: 8px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255,255,255,0.8);
+  color: #333;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.controls button:hover {
+  background-color: rgba(255,255,255,1);
+}
+
+/* Floating icon animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Responsive scaling */
+@media (max-width: 480px) {
+  .icon { font-size: 3rem; }
+  .details h2 { font-size: 1.5rem; }
+  .controls input { width: 140px; }
+}
